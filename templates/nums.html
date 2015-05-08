@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/style.css" />
+        <title>App | Experiment Results</title>
+    </head>
+    <body>
+        <h1>Number Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Exp. Number</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pair in data %}
+                    <tr>
+                        <td>{{ pair[0] }}</td>
+                        <td>{{ pair[1] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h1>Pictures</h1>
+        {% for pair in pics %}
+            <div>
+                <h4>Experiment {{ pair[0] }}</h4>
+                <img height="100px" src="/static/uploads/{{ pair[1] }}" />
+            </div>
+        {% endfor %}
+    </body>
+</html>

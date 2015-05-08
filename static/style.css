@@ -1,0 +1,11 @@
+html, body {
+    font-family: sans-serif;
+}
+
+input {
+    display: block;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
